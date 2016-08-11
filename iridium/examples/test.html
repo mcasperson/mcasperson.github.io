@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script>
+        function addOutput(val) {
+            document.getElementById("output").textContent = val;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button id="buttonId" onclick="addOutput('Button By ID Clicked')">Button By ID</button>
+        <button class="buttonClass" onclick="addOutput('Button By Class Clicked')">Button By Class</button>
+        <input type="button" name="buttonName" value="Button By Name" onclick="addOutput('Button By Name Clicked')">
+        <input type="button" value="Button By Value" onclick="addOutput('Button By Value Clicked')">
+        <button onclick="addOutput('Button By Text Clicked')">Button By Text</button>
+    </div>
+    <div id="output">
+
+    </div>
+    <div>
+        <input type="text" id="textId">
+        <input type="text" class="textClass">
+        <input type="text" name="textName">
+        <input type="text" value="textValue">
+    </div>
+    <div class="divClass" id="verifyDivClass">
+        A div with a class
+    </div>
+</body>
+</html>
