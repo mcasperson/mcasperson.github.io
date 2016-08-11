@@ -15,9 +15,6 @@
         <input type="button" value="buttonValue" onclick="addOutput('Button By Value Clicked')">
         <button onclick="addOutput('Button By Text Clicked')">Button By Text</button>
     </div>
-    <div id="output">
-
-    </div>
     <div>
         <input type="text" id="textId">
         <input type="text" class="textClass">
@@ -42,6 +39,12 @@
     </div>
     <div>
         <a href="test.html">Test Link</a>
+    </div>
+    <div>
+        <textarea id="textArea" onfocus="addOutput('Focused on textarea')"></textarea>
+    </div>
+    <div id="output">
+
     </div>
 </body>
 </html>
