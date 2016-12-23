@@ -1,10 +1,17 @@
 <html>
 <head>
     <title>Iridium Test Page</title>
+    <link rel="stylesheet" href="jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
     <script>
         function addOutput(val) {
             document.getElementById("output").textContent = val;
         }
+
+        $( function() {
+            $( "#slider" ).slider();
+        } );
     </script>
 </head>
 <body>
@@ -75,5 +82,7 @@
 
     <button id="alertButton" onclick="alert('Hi')">Alert Button</button>
     <button id="confirmButton" onclick="confirm('Confirm Box')">Confirm Button</button>
+
+    <div id="slider"></div>
 </body>
 </html>
