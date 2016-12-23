@@ -13,18 +13,21 @@
 
         $( function() {
             $( "#slider" ).slider();
+
+            var slider = document.getElementById('nouislider');
+
+            noUiSlider.create(slider, {
+                start: [20, 80],
+                connect: true,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+
         } );
 
-        var slider = document.getElementById('nouislider');
 
-        noUiSlider.create(slider, {
-            start: [20, 80],
-            connect: true,
-            range: {
-                'min': 0,
-                'max': 100
-            }
-        });
     </script>
 </head>
 <body>
