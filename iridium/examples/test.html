@@ -1,6 +1,8 @@
 <html>
 <head>
     <title>Iridium Test Page</title>
+    <link rel="stylesheet" href="noUiSlider/nouislider.min.css">
+    <script src="noUiSlider/nouislider.min.js"></script>
     <link rel="stylesheet" href="jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
     <script src="jquery-3.1.1.min.js"></script>
     <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
@@ -12,6 +14,17 @@
         $( function() {
             $( "#slider" ).slider();
         } );
+
+        var slider = document.getElementById('nouislider');
+
+        noUiSlider.create(slider, {
+            start: [20, 80],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 100
+            }
+        });
     </script>
 </head>
 <body>
@@ -86,5 +99,9 @@
     <br/><br/>
 
     <div id="slider"></div>
+
+    <br/><br/>
+
+    <div id="nouislider"></div>
 </body>
 </html>
