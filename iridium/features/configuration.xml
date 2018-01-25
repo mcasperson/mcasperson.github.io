@@ -1,8 +1,8 @@
 <profile>
     <settings>
-        <desiredCapabilities enabled="true" group="Edge">
+        <desiredCapabilities enabled="true" group="Chrome">
             <capability name="platform" value="WINDOWS"/>
-            <capability name="browserName" value="edge"/>
+            <capability name="browserName" value="Chrome"/>
         </desiredCapabilities>
     </settings>
 </profile>
