@@ -1,195 +1,19 @@
-<html>
-<head>
-    <title>Iridium Test Page</title>
-    <link rel="stylesheet" href="noUiSlider/nouislider.min.css">
-    <script src="noUiSlider/nouislider.min.js"></script>
-    <link rel="stylesheet" href="jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
-    <script src="jquery-3.1.1.min.js"></script>
-    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
-    <script>
-        function addOutput(val) {
-            document.getElementById("output").textContent = val;
-        }
-
-        $(function () {
-            $("#slider").slider();
-
-            var slider = document.getElementById('nouislider');
-
-            noUiSlider.create(slider, {
-                start: [20, 80],
-                connect: true,
-                range: {
-                    'min': 0,
-                    'max': 100
-                }
-            });
-
-        });
-
-        function changeBackground(element) {
-            var r = Math.floor(Math.random() * 255);
-            var g = Math.floor(Math.random() * 255);
-            var b = Math.floor(Math.random() * 255);
-            element.style.fill = 'rgb(' + r + ', ' + g + ' , ' + b + ')';
-            document.getElementById("svgOutput").textContent = "SVG Clicked!";
-        }
-    </script>
-</head>
-<body>
-<h3>Simple Tests</h3>
-<div>
-    <button id="buttonId" onclick="addOutput('Button By ID Clicked')">Button By ID</button>
-    <button class="buttonClass" onclick="addOutput('Button By Class Clicked')">Button By Class</button>
-    <input type="button" name="buttonName" value="Button By Name" onclick="addOutput('Button By Name Clicked')">
-    <input type="button" value="buttonValue" onclick="addOutput('Button By Value Clicked')">
-    <button onclick="addOutput('Button By Text Clicked')">Button By Text</button>
-</div>
-<div>
-    <input type="text" id="textId">
-    <input type="text" class="textClass">
-    <input type="text" name="textName">
-    <input type="text" value="textValue">
-</div>
-<div>
-    <select id="selectList">
-        <option></option>
-        <option id="optionValue" value="Option1">Option 1</option>
-        <option value="Option2">Option 2</option>
-        <option value="Option3">Option 3</option>
-        <option value="Option4">Option 4</option>
-    </select>
-</div>
-<div class="divClass" id="verifyDivClass">
-    A div with a class
-</div>
-<div id="verifyNumber" data-verify="number">
-    12345678
-</div>
-<div id="verifyString" data-verify="string">
-    abcdefg
-</div>
-<div>
-    <a href="test.html">Test Link</a>
-</div>
-<div>
-    <textarea id="textArea" onfocus="addOutput('Focused on textarea')"></textarea>
-</div>
-<div>
-    <textarea id="textArea2" onfocus="addOutput('Focused on textarea2')"></textarea>
-</div>
-<h3>Event Tests</h3>
-<button id="eventButton"
-        onmousedown="addOutput('Button mousedown')"
-        onmouseup="addOutput('Button mouseup')"
-        onmouseover="addOutput('Button mouseover')"
-        onmouseout="addOutput('Button mouseout')"
-        onmousemove="addOutput('Button mousemove')"
-        onmouseenter="addOutput('Button mouseenter')"
-        onmouseleave="addOutput('Button mouseleave')"
-        onkeydown="addOutput('Button keydown')"
-        onkeypress="addOutput('Button keypress')"
-        onkeyup="addOutput('Button keyup')">Event Button
-</button>
-
-<button data-attrname="button" onclick="addOutput('Button with named attr clicked')">Named Attr Button</button>
-<button data-number="1" onclick="addOutput('Button with random attribute clicked')">Button 1</button>
-<button data-number="2" onclick="addOutput('Button with random attribute clicked')">Button 2</button>
-<button data-number="3" onclick="addOutput('Button with random attribute clicked')">Button 3</button>
-<button data-number="4" onclick="addOutput('Button with random attribute clicked')">Button 4</button>
-<button data-number="5" onclick="addOutput('Button with random attribute clicked')">Button 5</button>
-<h3>Output</h3>
-<div id="output">
-
-</div>
-
-<button id="alertButton" onclick="alert('Hi')">Alert Button</button>
-<button id="confirmButton" onclick="confirm('Confirm Box')">Confirm Button</button>
-
-<br/><br/>
-
-<div id="slider"></div>
-
-<br/><br/>
-
-<div id="nouislider"></div>
-
-<form onsubmit="addOutput('Form submitted'); return false;">
-    <input type="text" id="formText"/>
-</form>
-
-<br/><br/>
-
-<b>Some</b> <i>text</i> <u>with</u> <span style="color: #0b93d5">styles</span>
-
-<br/><br/>
-
-<b>Some</b> <i>text</i> <u>with</u> <span style="display: none">blah</span><span>hidden elements</span>
-
-<br/><br/>
-
-<b>Some</b> <i>text</i> <u>with</u> <span style="visibility: hidden">blah</span><span>invisible elements</span>
-
-<br/><br/>
-
-<b>Some</b> <i>text</i> <u>with</u> <sup>supertext</sup>
-
-<br/><br/>
-
-<b>Some</b> <i>text</i> <u>with</u> <sub>subtext</sub>
-
-<br/><br/>
-
-<b>Some</b> <i>text</i> <u>with</u> UTF characters like Є and ϼ
-
-<br/><br/>
-
-<table>
-    <tr>
-        <td>
-            <b>Some</b>
-        </td>
-        <td>
-            <i>text</i>
-        </td>
-        <td>
-            <u>in</u>
-        </td>
-        <td>
-            <b>a</b>
-        </td>
-        <td>
-            <sub>table</sub>
-        </td>
-    </tr>
-</table>
-
-<svg version="1.1"
-     baseProfile="full"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
-    <rect width="100%" height="100%" fill="red"/>
-    <circle cx="150" cy="100" r="80" fill="green" onclick="changeBackground(this)"/>
-    <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
-</svg>
-
-<div id="svgOutput">SVG unclicked</div>
-
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	 viewBox="0 0 330 480" preserveAspectRatio="xMinYMin meet" enable-background="new 0 0 330 480" xml:space="preserve">
 <style>
 	/* This style is need in order for the '.selectable-area--enable:hover' to work */
-    .selectable-area:hover {
-        fill: #fff;
-    }
-
-    .selectable-area--enable:hover {
-        fill: #fc8189;
-    }
-
-    .selectable-area--highlight {
-        fill: #fa505b;
-    }
+	.selectable-area:hover {
+		fill: #fff;
+	}
+	.selectable-area--enable:hover {
+		fill: #fc8189;
+	}
+	.selectable-area--highlight {
+		fill: #fa505b;
+	}
 </style>
 <g class="selectable-area" id="LHR">
 	<path fill="#FFFFFF" d="M128.5,312.5l-13.036,1.75c0,0,0.5,17.875,3.75,26.75c0,0,0.125,6.25,3.25,10.125s5.375,3.125,5.375,3.125
@@ -221,7 +45,7 @@
 		L129.875,298.875z"/>
 </g>
 <g class="selectable-area" id="CNR">
-	<path onclick="changeBackground(this)" fill="#FFFFFF" d="M129.125,409.375c0,0,0.129-0.023,0.388-0.063c3.176-0.494,25.89-3.66,68.996-0.55l-7.014,17.182
+	<path fill="#FFFFFF" d="M129.125,409.375c0,0,0.129-0.023,0.388-0.063c3.176-0.494,25.89-3.66,68.996-0.55l-7.014,17.182
 		l0.005,28.723c0,0-21.833-1.688-29-1.667c-6.708,0.02-26.5,1.833-26.5,1.833l-0.031-28.889"/>
 	<path fill="#FFFFFF" d="M125.781,335.006c0,0,8.344,5.244,13.094,7.119S158.25,345,164.5,345s19.253-0.074,23.564-1.537
 		s15.519-8.546,15.519-8.546s1.959,14.068-2.937,20.763c0,0-5.646,5.32-14.771,7.445s-14.625,2.125-20.875,2
@@ -1394,6 +1218,3 @@
 	</g>
 </g>
 </svg>
-
-</body>
-</html>
