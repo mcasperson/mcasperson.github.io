@@ -1,0 +1,8 @@
+<profile>
+    <settings>
+        <desiredCapabilities enabled="true" group="Edge">
+            <capability name="platform" value="WINDOWS"/>
+            <capability name="browserName" value="edge"/>
+        </desiredCapabilities>
+    </settings>
+</profile>
