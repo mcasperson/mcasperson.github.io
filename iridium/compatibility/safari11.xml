@@ -1,0 +1,11 @@
+<profile>
+    <settings>
+        <desiredCapabilities enabled="true" group="Chrome">
+            <capability name="os" value="OS X"/>
+            <capability name="os_version" value="High Sierra"/>
+            <capability name="browser_version" value="11.0"/>
+            <capability name="browser" value="Safari"/>
+            <capability name="browserstack.selenium_version" value="3.5.2"/>
+        </desiredCapabilities>
+    </settings>
+</profile>

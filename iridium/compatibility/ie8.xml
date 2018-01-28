@@ -1,0 +1,11 @@
+<profile>
+    <settings>
+        <desiredCapabilities enabled="true" group="Chrome">
+            <capability name="os" value="Windows"/>
+            <capability name="os_version" value="7"/>
+            <capability name="browser_version" value="8.0"/>
+            <capability name="browser" value="IE"/>
+            <capability name="browserstack.selenium_version" value="3.5.2"/>
+        </desiredCapabilities>
+    </settings>
+</profile>
