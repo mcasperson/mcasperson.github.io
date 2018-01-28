@@ -1,6 +1,6 @@
 <profile>
     <settings>
-        <desiredCapabilities enabled="true" group="Chrome">
+        <desiredCapabilities enabled="true">
             <capability name="os" value="OS X"/>
             <capability name="os_version" value="High Sierra"/>
             <capability name="browser_version" value="11.0"/>

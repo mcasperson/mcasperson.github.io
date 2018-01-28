@@ -1,6 +1,6 @@
 <profile>
     <settings>
-        <desiredCapabilities enabled="true" group="Chrome">
+        <desiredCapabilities enabled="true">
             <capability name="os" value="Windows"/>
             <capability name="os_version" value="10"/>
             <capability name="browser_version" value="57.0"/>
