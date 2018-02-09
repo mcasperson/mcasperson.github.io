@@ -1395,9 +1395,19 @@
 </g>
 </svg>
 
-<object data="images/vehicle-diagrams/sedan/sedan-diagram.svg" type="image/svg+xml">
+<object data="images/vehicle-diagrams/sedan/sedan-diagram.svg" type="image/svg+xml" id="svgObject">
 
 </object>
+
+<script>
+    var a = document.getElementById("svgObject");
+    // Get the SVG document inside the Object tag
+    var svgDoc = a.contentDocument;
+    // Get one of the SVG items by ID;
+    var svgItem = svgDoc.getElementById("CNR");
+    // Set the colour to something else
+    svgItem.onclick = changeBackground(svgItem);
+</script>
 
 </body>
 </html>
