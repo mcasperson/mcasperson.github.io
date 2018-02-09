@@ -1400,7 +1400,7 @@
 </object>
 
 <script>
-	while (true) {
+	function addClickEvent() {
         // Change the background of the embedded SVG image
         var a = document.getElementById("svgObject");
         // Get the SVG document inside the Object tag
@@ -1410,11 +1410,13 @@
             // Get one of the SVG items by ID;
             var svgItem = svgDoc.getElementById("CNR");
             // Set the colour to something else
-            svgItem.onclick = changeBackground(svgItem.getElementsByTagName("path")[0]);
-            // We found the element, so exit the loop
-            break;
-        }
+            svgItem.onclick = function() {changeBackground(svgItem.getElementsByTagName("path")[0])};
+        } else {
+            window.setTimeout(addClickEvent, 500);
+		}
     }
+
+    addClickEvent();
 </script>
 
 </body>
